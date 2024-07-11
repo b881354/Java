@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" extends="struts-default">
+        <action name="SturtsAction" class="controller.SturtsAction"> <!-- here -->
+            <result name="a">/a.jsp</result>
+            <result name="b">/b.jsp</result>
+        </action>
+        <action name="AddMemberAction" class="controller.AddMemberAction">
+       		<result name="addSuccess" type="redirect">/addSuccess.jsp</result>
+       	</action>
+    </package>
+
+</struts>
